@@ -16,11 +16,11 @@ describe('transform', () => {
   });
 
   test('should replace root relative URLs as directed by replaceRootRelativeUrls', () => {
-    const content = 'Test ()[/foo]';
+    const content = 'Test [](/foo)';
     const transformMap = {
       rootRelativeUrlsPrefix: 'https://example.com',
     };
-    const expected = 'Test ()[https://example.com/foo]';
+    const expected = 'Test [](https://example.com/foo)';
 
     const result = transform(content, transformMap);
 
@@ -28,14 +28,14 @@ describe('transform', () => {
   });
 
   test('should replace exact content and root relative URLs when those options exist in the transformMap and relevant content exists', () => {
-    const content = 'Test foo ()[/foo]';
+    const content = 'Test foo [](/foo)';
     const transformMap = {
       exactReplace: {
         foo: 'bar',
       },
       rootRelativeUrlsPrefix: 'https://example.com',
     };
-    const expected = 'Test bar ()[https://example.com/bar]';
+    const expected = 'Test bar [](https://example.com/bar)';
 
     const result = transform(content, transformMap);
 

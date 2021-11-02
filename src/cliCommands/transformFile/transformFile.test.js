@@ -13,8 +13,8 @@ title: Hello commander
 
 # Heading 2
 
-()[./link]
-()[/articles]
+[](./link)
+[](/articles)
 Foo
 
 
@@ -39,8 +39,8 @@ title: Hello commander
 
 # Heading 2
 
-()[https://example.com/bar]
-()[https://example.com/articles]
+[](https://example.com/bar)
+[](https://example.com/articles)
 Bar
 
 
