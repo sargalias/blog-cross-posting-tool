@@ -1,4 +1,4 @@
-import { dirname } from 'path';
+import { dirname, resolve } from 'path';
 import { readFile, writeFile, mkdir } from 'fs/promises';
 import transformMany from '../../utilities/transformMany/transformMany.js';
 
@@ -38,6 +38,7 @@ const _writeToFile = async (path, content) => {
   try {
     await mkdir(directoryPath, { recursive: true });
     await writeFile(path, content);
+    console.log(`Created file at ${resolve(path)}`);
   } catch (error) {}
 };
 

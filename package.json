@@ -21,7 +21,6 @@
     "prettier": "^2.3.2"
   },
   "dependencies": {
-    "dotenv": "^10.0.0",
     "ramda": "^0.27.1",
     "yargs": "^17.2.1"
   }
