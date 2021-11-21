@@ -7,7 +7,7 @@ import _newMapper from './cliCommands/newMapper/newMapper.js';
 const y = yargs(process.argv.slice(2))
   .usage(
     `
-Usage: transform <source> [destination] [--transformers general website] [--mapper=mapper.json]
+Usage: transform <source> [destination] --transformers general website [--mapper=mapper.json]
 
 Usage: new-mapper
 `,
